@@ -1,0 +1,7 @@
+spring:
+  devtools:
+    livereload:
+      enabled: false
+
+  datasource:
+    url: jdbc:mysql://localhost/volmed_api_test
