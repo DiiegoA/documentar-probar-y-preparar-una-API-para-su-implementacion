@@ -17,7 +17,7 @@ public record DatosRegistroMedico(
         @Email(message = "Debe ingresar un correo electrónico válido")
         String email,
         @NotBlank(message = "El campo documento no puede estar vacío")
-        @Pattern(regexp = "\\d{8,11}", message = "El documento debe contener entre 8 y 11 dígitos")
+        @Pattern(regexp = "\\d{1,3}(\\.\\d{3}){0,2}", message = "El documento debe ser numérico, con o sin puntos, y tener entre 6 y 10 dígitos.")
         String documento,
         @NotNull(message = "Debe seleccionar una especialidad válida")
         Especialidad especialidad, // Cambiamos a String para permitir entradas flexibles
